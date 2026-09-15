@@ -45,16 +45,29 @@ Pose, PERCHED: one wing folded against the body, the other tucked behind. Both f
 
 Output: render at high resolution. No shadow, no paper texture, no caption."""
 
-# Birds with large white areas. The model paints white plumage the colour of the
-# paper, so the cut-out cannot find the bird; ask for clean white and a closed outline.
-PALE = {"egretta-garzetta", "ardea-alba", "bubulcus-ibis", "platalea-leucorodia", "cygnus-olor", "cygnus-cygnus",
-        "recurvirostra-avosetta", "sternula-albifrons", "sterna-hirundo", "thalasseus-sandvicensis", "tyto-alba",
-        "chroicocephalus-ridibundus", "hydrocoloeus-minutus", "ichthyaetus-melanocephalus", "larus-argentatus",
-        "larus-cachinnans", "larus-canus", "larus-fuscus", "larus-marinus", "larus-michahellis", "rissa-tridactyla",
-        "fulmarus-glacialis", "morus-bassanus", "calidris-alba", "himantopus-himantopus"}
+# The model paints white plumage the colour of the cream paper, so the cut-out
+# loses white bellies, heads and whole egrets, and asking for "whiter white" is
+# not enough. Species with white plumage are generated on a flat duck-egg blue
+# ground instead: the cut-out removes the ground, so the finished print is the same.
+PALE = {
+    # white-bodied
+    "egretta-garzetta", "ardea-alba", "bubulcus-ibis", "platalea-leucorodia", "cygnus-olor", "cygnus-cygnus",
+    "recurvirostra-avosetta", "tyto-alba", "morus-bassanus", "fulmarus-glacialis", "himantopus-himantopus",
+    "sternula-albifrons", "sterna-hirundo", "thalasseus-sandvicensis", "chroicocephalus-ridibundus",
+    "hydrocoloeus-minutus", "ichthyaetus-melanocephalus", "larus-argentatus", "larus-cachinnans", "larus-canus",
+    "larus-fuscus", "larus-marinus", "larus-michahellis", "rissa-tridactyla", "calidris-alba",
+    # white underparts or large white patches the cut-out has lost before
+    "aegithalos-caudatus", "actitis-hypoleucos", "alca-torda", "calidris-canutus", "calidris-pugnax",
+    "certhia-familiaris", "charadrius-dubius", "curruca-communis", "curruca-curruca", "delichon-urbicum",
+    "ficedula-hypoleuca", "limosa-limosa", "motacilla-alba", "oenanthe-oenanthe", "panurus-biarmicus",
+    "sylvia-borin", "tringa-ochropus", "turdus-pilaris", "linaria-cannabina", "carduelis-carduelis",
+    "athene-noctua", "asio-flammeus", "haematopus-ostralegus", "pluvialis-apricaria", "phylloscopus-inornatus", "mergus-merganser", "uria-aalge", "lophophanes-cristatus",
+}
+CREAM_GROUND = "The bird sits on a CONSISTENT WARM CREAM tonal background - like aged Japanese mulberry paper, a soft warm buff cream color. The cream ground fills the entire frame and is identical across every print."
+BLUE_GROUND = "The bird sits on a FLAT, PERFECTLY EVEN PALE DUCK-EGG BLUE background (a cool light blue-grey, like #b4c8d2). The blue ground fills the entire frame edge to edge with no texture, vignette or gradient."
 PALE_NOTE = """
 
-White plumage: render every white area of this bird as CLEAN BRIGHT WHITE, clearly and obviously lighter than the warm cream paper, never cream or buff. Enclose the white areas with a thin, continuous, unbroken ink outline so the bird separates cleanly from the paper. Do not leave gaps in the outline around the head, neck, back or belly."""
+White plumage: render every white area of this bird as CLEAN WHITE, clearly different from the blue ground, never tinted blue, cream or buff. Enclose the white areas with a thin, continuous, unbroken ink outline so the bird separates cleanly from the ground. Do not leave gaps in the outline around the head, neck, back or belly."""
 
 
 def slugify(sci):
@@ -68,13 +81,13 @@ def http(url, data=None, headers=None, timeout=120):
 
 
 def wiki_reference(sci, com):
-    """Wikipedia article image for the species (originalimage preferred)."""
+    """Wikipedia article image for the species (the thumbnail: we shrink to 384 px anyway, and originals get rate-limited)."""
     for title in (sci, com):
         try:
             b, _ = http("https://en.wikipedia.org/api/rest_v1/page/summary/" + urllib.parse.quote(title.replace(" ", "_")),
                         headers={"User-Agent": "birdpi-illustrations/1.0 (personal project)"})
             d = json.loads(b)
-            src = (d.get("originalimage") or d.get("thumbnail") or {}).get("source")
+            src = (d.get("thumbnail") or d.get("originalimage") or {}).get("source")
             if src:
                 img, _ = http(src, headers={"User-Agent": "birdpi-illustrations/1.0 (personal project)"})
                 return img
@@ -91,7 +104,11 @@ def shrink(img_bytes, long_side):
 
 def generate(sci, com, key, sleep=6.0):
     ref = wiki_reference(sci, com)
-    parts = [{"text": PROMPT.format(sci_name=sci, com_name=com) + (PALE_NOTE if slugify(sci) in PALE else "")}]
+    text = PROMPT.format(sci_name=sci, com_name=com)
+    if slugify(sci) in PALE:
+        assert CREAM_GROUND in text
+        text = text.replace(CREAM_GROUND, BLUE_GROUND).replace("floating against the cream paper ground", "floating against the blue ground") + PALE_NOTE
+    parts = [{"text": text}]
     if ref:
         parts.append({"inline_data": {"mime_type": "image/jpeg", "data": base64.b64encode(shrink(ref, 384)).decode()}})
     else:
@@ -115,10 +132,20 @@ def generate(sci, com, key, sleep=6.0):
     raise RuntimeError("gave up")
 
 
+def touches_frame(png_bytes, band=6, share=0.01):
+    """True when the bird runs off the edge: more than `share` of the outermost
+    pixels differ clearly from the paper. Such prints lose parts in the cut-out."""
+    rgb = np.asarray(Image.open(io.BytesIO(png_bytes)).convert("RGB")).astype(np.int16)
+    edge = np.concatenate([rgb[:band].reshape(-1, 3), rgb[-band:].reshape(-1, 3), rgb[:, :band].reshape(-1, 3), rgb[:, -band:].reshape(-1, 3)])
+    med = np.median(edge, axis=0)
+    return (np.abs(edge - med).sum(axis=1) > 90).mean() > share
+
+
 def cutout(raw_png: Path, colour_png: Path, mono_png: Path):
     im = Image.open(raw_png).convert("RGBA")
     # imported cutouts arrive with transparent corners: lay them on cream first
-    if np.asarray(im)[0, 0, 3] < 10:
+    imported = np.asarray(im)[0, 0, 3] < 10
+    if imported:
         cream = Image.new("RGBA", im.size, (245, 236, 215, 255)); cream.alpha_composite(im); im = cream
     a = np.asarray(im).astype(np.int16)
     rgb = a[..., :3]
@@ -127,13 +154,25 @@ def cutout(raw_png: Path, colour_png: Path, mono_png: Path):
     # to the border pixels and measure each pixel against the plane, not one colour
     band = 10
     yy, xx = np.mgrid[0:h, 0:w]
-    border = np.zeros((h, w), dtype=bool); border[:band, :] = border[-band:, :] = True; border[:, :band] = border[:, -band:] = True
+    # sample a ring just inside the edge: some prints have a pale drawn edge line
+    # (imports are already cut out and often touch the frame: sample the very edge)
+    m = 0 if imported else int(0.01 * max(h, w)); ring = np.zeros((h, w), dtype=bool)
+    ring[m:m + band, m:w - m] = ring[h - m - band:h - m, m:w - m] = True; ring[m:h - m, m:m + band] = ring[m:h - m, w - m - band:w - m] = True
+    border = ring
     A = np.stack([np.ones(border.sum()), xx[border] / w, yy[border] / h, (xx[border] / w) ** 2, (yy[border] / h) ** 2], axis=1)
     coef, *_ = np.linalg.lstsq(A, rgb[border].astype(float), rcond=None)
+    # refit without border pixels far from the first fit (a drawn edge line, a
+    # bird that touches the frame), so they do not drag the surface off the ground
+    resid = np.abs(A @ coef - rgb[border]).sum(axis=1); ok = resid < 48
+    if not imported and ok.sum() > 0.5 * len(ok): coef, *_ = np.linalg.lstsq(A[ok], rgb[border][ok].astype(float), rcond=None)
     full = np.stack([np.ones(h * w), (xx / w).ravel(), (yy / h).ravel(), ((xx / w) ** 2).ravel(), ((yy / h) ** 2).ravel()], axis=1)
     plane = (full @ coef).reshape(h, w, 3)
     dist = np.abs(rgb - plane).sum(axis=2)
     passable = (dist < 48).astype(np.uint8)   # within the paper's own texture of the fitted surface
+    # the outermost strip is always ground: some prints have a drawn or pale edge
+    # line that would otherwise survive as a frame. Birds touching the frame are
+    # rejected at generation time.
+    if m: passable[:m] = 1; passable[-m:] = 1; passable[:, :m] = 1; passable[:, -m:] = 1
     # outside: passable pixels connected to the border
     n, lab = cv2.connectedComponents(passable, connectivity=4)
     edge = np.unique(np.concatenate([lab[0], lab[-1], lab[:, 0], lab[:, -1]]))
@@ -169,13 +208,20 @@ def cutout(raw_png: Path, colour_png: Path, mono_png: Path):
     make_mono(out, mono_png)
 
 
-def keep_main_components(fg, keep_ratio=0.04):
+def keep_main_components(fg, keep_ratio=0.04, edge_ratio=0.25):
     """Drop stray blobs: keep the largest connected region and anything at least
-    keep_ratio of its area (detached tail-tips, feet)."""
+    keep_ratio of its area (detached tail-tips, feet). Blobs touching the frame
+    edge must be bigger (edge_ratio): those are torn strips of the ground."""
     n, lab, st, _ = cv2.connectedComponentsWithStats(fg.astype(np.uint8), connectivity=4)
     if n <= 1: return fg
-    sizes = st[1:, cv2.CC_STAT_AREA]; big = sizes.max()
-    return np.isin(lab, [i + 1 for i, a in enumerate(sizes) if a >= keep_ratio * big])
+    h, w = fg.shape
+    sizes = st[1:, cv2.CC_STAT_AREA]; big = sizes.max(); keep = []
+    for i, a in enumerate(sizes):
+        x, y, bw, bh = st[i + 1, :4]
+        m = int(0.02 * max(w, h))
+        at_edge = x <= m or y <= m or x + bw >= w - m or y + bh >= h - m
+        if a == big or a >= (edge_ratio if at_edge else keep_ratio) * big: keep.append(i + 1)
+    return np.isin(lab, keep)
 
 
 def fill_small_holes(fg, max_area):
@@ -219,7 +265,10 @@ def main():
         try:
             if not args.post_only:
                 if not key: sys.exit("GEMINI_API_KEY not set")
-                png, had_ref = generate(sci, com, key)
+                for attempt in range(3):
+                    png, had_ref = generate(sci, com, key)
+                    if not touches_frame(png): break
+                    print("   bird touches the frame, regenerating", flush=True); time.sleep(args.sleep)
                 raw.write_bytes(png)
                 manifest[slug] = {"scientific": sci, "common": com, "reference_photo": had_ref, "generated": time.strftime("%Y-%m-%d"), "model": MODEL}
                 time.sleep(args.sleep)
