@@ -281,12 +281,36 @@
   "reference_photo": false,
   "scientific": "Calidris pugnax"
  },
+ "carduelis-cannabina": {
+  "alias_of": "linaria-cannabina",
+  "common": "Common Linnet",
+  "generated": "2026-09-15",
+  "model": "gemini-2.5-flash-image",
+  "reference_photo": true,
+  "scientific": "Linaria cannabina"
+ },
  "carduelis-carduelis": {
   "common": "European Goldfinch",
   "generated": "2026-09-15",
   "model": "gemini-2.5-flash-image",
   "reference_photo": true,
   "scientific": "Carduelis carduelis"
+ },
+ "carduelis-chloris": {
+  "alias_of": "chloris-chloris",
+  "common": "European Greenfinch",
+  "generated": "2026-09-15",
+  "model": "gemini-2.5-flash-image",
+  "reference_photo": true,
+  "scientific": "Chloris chloris"
+ },
+ "carduelis-spinus": {
+  "alias_of": "spinus-spinus",
+  "common": "Eurasian Siskin",
+  "generated": "2026-09-15",
+  "model": "gemini-2.5-flash-image",
+  "reference_photo": false,
+  "scientific": "Spinus spinus"
  },
  "certhia-brachydactyla": {
   "common": "Short-toed Treecreeper",
@@ -371,6 +395,14 @@
   "model": "gemini-2.5-flash-image",
   "reference_photo": true,
   "scientific": "Coccothraustes coccothraustes"
+ },
+ "coloeus-monedula": {
+  "alias_of": "corvus-monedula",
+  "common": "Eurasian Jackdaw",
+  "generated": "2026-09-15",
+  "model": "gemini-2.5-flash-image",
+  "reference_photo": true,
+  "scientific": "Corvus monedula"
  },
  "columba-livia": {
   "common": "Rock Dove",
@@ -473,6 +505,14 @@
   "model": "gemini-2.5-flash-image",
   "reference_photo": true,
   "scientific": "Dendrocopos major"
+ },
+ "dendrocopos-minor": {
+  "alias_of": "dryobates-minor",
+  "common": "Lesser Spotted Woodpecker",
+  "generated": "2026-09-15",
+  "model": "gemini-2.5-flash-image",
+  "reference_photo": false,
+  "scientific": "Dryobates minor"
  },
  "dryobates-minor": {
   "common": "Lesser Spotted Woodpecker",
@@ -1049,6 +1089,14 @@
   "reference_photo": false,
   "scientific": "Regulus ignicapilla"
  },
+ "regulus-ignicapillus": {
+  "alias_of": "regulus-ignicapilla",
+  "common": "Common Firecrest",
+  "generated": "2026-09-15",
+  "model": "gemini-2.5-flash-image",
+  "reference_photo": false,
+  "scientific": "Regulus ignicapilla"
+ },
  "regulus-regulus": {
   "common": "Goldcrest",
   "generated": "2026-09-15",
@@ -1176,6 +1224,22 @@
   "model": "gemini-2.5-flash-image",
   "reference_photo": true,
   "scientific": "Sylvia borin"
+ },
+ "sylvia-communis": {
+  "alias_of": "curruca-communis",
+  "common": "Common Whitethroat",
+  "generated": "2026-09-15",
+  "model": "gemini-2.5-flash-image",
+  "reference_photo": false,
+  "scientific": "Curruca communis"
+ },
+ "sylvia-curruca": {
+  "alias_of": "curruca-curruca",
+  "common": "Lesser Whitethroat",
+  "generated": "2026-09-15",
+  "model": "gemini-2.5-flash-image",
+  "reference_photo": false,
+  "scientific": "Curruca curruca"
  },
  "tachybaptus-ruficollis": {
   "common": "Little Grebe",
