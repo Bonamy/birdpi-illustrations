@@ -115,7 +115,7 @@ def cutout(raw_png: Path, colour_png: Path, mono_png: Path):
     corners = np.concatenate([rgb[:12, :12].reshape(-1, 3), rgb[:12, -12:].reshape(-1, 3), rgb[-12:, :12].reshape(-1, 3), rgb[-12:, -12:].reshape(-1, 3)])
     paper = np.median(corners, axis=0)
     dist = np.abs(rgb - paper).sum(axis=2)
-    passable = dist < 60          # close enough to the paper to be background
+    passable = dist < 38          # close to the paper colour; 60 ate white plumage on gulls and egrets
     # flood from the border through passable pixels
     mask = np.zeros((h, w), dtype=bool)
     from collections import deque
