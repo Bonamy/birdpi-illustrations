@@ -111,11 +111,17 @@ def cutout(raw_png: Path, colour_png: Path, mono_png: Path):
     a = np.asarray(im).astype(np.int16)
     rgb = a[..., :3]
     h, w = rgb.shape[:2]
-    # paper colour from the four corners
-    corners = np.concatenate([rgb[:12, :12].reshape(-1, 3), rgb[:12, -12:].reshape(-1, 3), rgb[-12:, :12].reshape(-1, 3), rgb[-12:, -12:].reshape(-1, 3)])
-    paper = np.median(corners, axis=0)
-    dist = np.abs(rgb - paper).sum(axis=2)
-    passable = dist < 60          # close enough to the paper to be background (38 was too strict: paper texture stopped the flood)
+    # paper model: the paper has a vignette, so fit a smooth plane per channel
+    # to the border pixels and measure each pixel against the plane, not one colour
+    band = 10
+    yy, xx = np.mgrid[0:h, 0:w]
+    border = np.zeros((h, w), dtype=bool); border[:band, :] = border[-band:, :] = True; border[:, :band] = border[:, -band:] = True
+    A = np.stack([np.ones(border.sum()), xx[border] / w, yy[border] / h, (xx[border] / w) ** 2, (yy[border] / h) ** 2], axis=1)
+    coef, *_ = np.linalg.lstsq(A, rgb[border].astype(float), rcond=None)
+    full = np.stack([np.ones(h * w), (xx / w).ravel(), (yy / h).ravel(), ((xx / w) ** 2).ravel(), ((yy / h) ** 2).ravel()], axis=1)
+    plane = (full @ coef).reshape(h, w, 3)
+    dist = np.abs(rgb - plane).sum(axis=2)
+    passable = dist < 48          # within the paper's own texture of the fitted surface
     # flood from the border through passable pixels
     mask = np.zeros((h, w), dtype=bool)
     from collections import deque
