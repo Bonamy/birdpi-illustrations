@@ -82,32 +82,57 @@ def label(slug, name, force=False):
     if xs.size == 0: return "empty"
     x0, x1, y0 = xs.min(), xs.max(), ys.min()
     bw = x1 - x0 + 1
-    # font size: bird-relative, but shrink (to a floor) so long names can still ride the curve
-    base = ImageFont.truetype(str(FONT), 100)
-    per100 = base.getlength(name)                       # text width at 100 px
+    # font size is bird-relative. Long names may shrink a little to ride the
+    # curve, but never below a floor: a tiny label is worse than a straight one.
     size = int(max(30, min(96, bw / 8.5)))
-    fit = int(bw * SPAN * 0.98 / per100 * 100)          # size at which the name just fits the curve span
-    size = max(28, min(size, fit)) if fit >= 28 else size
-    font = ImageFont.truetype(str(FONT), size)
-    try: font.set_variation_by_axes([550])
-    except Exception: pass
-    text_w = font.getlength(name)
-    pad_top = int(size * 1.9); pad_side = int(max(0, (text_w - bw) / 2 + size))
+    floor = int(max(28, bw / 13))
+    top = outline(a)
+    pad_top = int(size * 1.9); pad_side = int(size * 6)   # generous; cropped away at the end
     canvas = Image.new("RGBA", (im.width + 2 * pad_side, im.height + pad_top), (0, 0, 0, 0))
     canvas.alpha_composite(im, (pad_side, pad_top))
-    top = outline(a)
-    cx0, cx1 = int(x0 + bw * (0.5 - SPAN / 2)), int(x0 + bw * (0.5 + SPAN / 2))
-    cols = [x for x in range(cx0, cx1 + 1) if top[x] >= 0]
-    mode = "straight"
-    if len(cols) > 10:
-        sm = smooth(top[cols], max(4, len(cols) // 6))
-        lift = size * 0.55
-        pts = [(x + pad_side, sm[i] + pad_top - lift) for i, x in enumerate(cols)]
-        length = sum(math.hypot(pts[i+1][0]-pts[i][0], pts[i+1][1]-pts[i][1]) for i in range(len(pts)-1))
-        run = pts[-1][0] - pts[0][0]; rise = max(p[1] for p in pts) - min(p[1] for p in pts)
-        if length >= text_w * 1.02 and rise / max(run, 1) < STEEP:
-            write_along(canvas, pts, name, font, size); mode = "curved"
+    mode = "straight"; font = None
+
+    # Smoothed top outline of the whole bird. Running median first so crests and
+    # raised tail-tips do not lift the line, then a moving average.
+    cols = [x for x in range(x0, x1 + 1) if top[x] >= 0]
+    raw = top[cols].astype(float)
+    k = max(4, len(cols) // 14)
+    med = np.array([np.median(raw[max(0, i-k):i+k+1]) for i in range(len(raw))])
+    sm = smooth(med, k)
+
+    def best_window(sz, tw):
+        """Slide a window the width of the text along the back and pick the
+        flattest stretch. Returns lifted path points, or None."""
+        need = int(tw * 1.04)
+        lift = sz * 0.45
+        MAX_LOCAL, MAX_OVERALL = 1.0, 0.75         # ~45 degrees locally, ~37 overall
+        w = max(6, int(sz * 0.6)); best = None
+        lo, hi = int(len(cols) * 0.04), int(len(cols) * 0.96)
+        for s in range(lo, hi - need, max(2, need // 40)):
+            seg = range(s, s + need)
+            pts = [(cols[i] + pad_side, sm[i] + pad_top - lift) for i in seg]
+            worst = 0.0
+            for i in range(0, len(pts) - w, max(1, w // 3)):
+                worst = max(worst, abs(pts[i+w][1] - pts[i][1]) / max(pts[i+w][0] - pts[i][0], 1))
+            if worst > MAX_LOCAL: continue
+            overall = abs(pts[-1][1] - pts[0][1]) / max(pts[-1][0] - pts[0][0], 1)
+            if overall > MAX_OVERALL: continue
+            centre_pen = abs((s + need / 2) / len(cols) - 0.5)    # mild preference for the middle
+            score = worst + 0.6 * overall + 0.25 * centre_pen
+            if best is None or score < best[0]: best = (score, pts)
+        return None if best is None else best[1]
+
+    for sz in range(size, floor - 1, -4):
+        f = ImageFont.truetype(str(FONT), sz)
+        try: f.set_variation_by_axes([550])
+        except Exception: pass
+        pts = best_window(sz, f.getlength(name)) if len(cols) > 20 else None
+        if pts:
+            write_along(canvas, pts, name, f, sz); mode = "curved"; font = f; size = sz; break
     if mode == "straight":
+        font = ImageFont.truetype(str(FONT), size)
+        try: font.set_variation_by_axes([550])
+        except Exception: pass
         d = ImageDraw.Draw(canvas)
         d.text((pad_side + x0 + bw / 2, pad_top + y0 - size * 0.35), name, font=font, fill=INK, anchor="ms")
     bbox = canvas.getbbox()
