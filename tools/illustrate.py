@@ -15,6 +15,7 @@ Needs GEMINI_API_KEY in the environment. Style reference: refs/style-koson-great
 import base64, io, json, os, sys, time, urllib.request, urllib.parse, argparse
 from pathlib import Path
 import numpy as np
+import cv2
 from PIL import Image, ImageFilter
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -43,6 +44,17 @@ Feet: BOTH FEET visible at the bottom of the body. Songbird feet are SMALL relat
 Pose, PERCHED: one wing folded against the body, the other tucked behind. Both feet visible, toes curled gently forward as if grasping a thin perch that is NOT drawn. The bird floats in space.
 
 Output: render at high resolution. No shadow, no paper texture, no caption."""
+
+# Birds with large white areas. The model paints white plumage the colour of the
+# paper, so the cut-out cannot find the bird; ask for clean white and a closed outline.
+PALE = {"egretta-garzetta", "ardea-alba", "bubulcus-ibis", "platalea-leucorodia", "cygnus-olor", "cygnus-cygnus",
+        "recurvirostra-avosetta", "sternula-albifrons", "sterna-hirundo", "thalasseus-sandvicensis", "tyto-alba",
+        "chroicocephalus-ridibundus", "hydrocoloeus-minutus", "ichthyaetus-melanocephalus", "larus-argentatus",
+        "larus-cachinnans", "larus-canus", "larus-fuscus", "larus-marinus", "larus-michahellis", "rissa-tridactyla",
+        "fulmarus-glacialis", "morus-bassanus", "calidris-alba", "himantopus-himantopus"}
+PALE_NOTE = """
+
+White plumage: render every white area of this bird as CLEAN BRIGHT WHITE, clearly and obviously lighter than the warm cream paper, never cream or buff. Enclose the white areas with a thin, continuous, unbroken ink outline so the bird separates cleanly from the paper. Do not leave gaps in the outline around the head, neck, back or belly."""
 
 
 def slugify(sci):
@@ -79,7 +91,7 @@ def shrink(img_bytes, long_side):
 
 def generate(sci, com, key, sleep=6.0):
     ref = wiki_reference(sci, com)
-    parts = [{"text": PROMPT.format(sci_name=sci, com_name=com)}]
+    parts = [{"text": PROMPT.format(sci_name=sci, com_name=com) + (PALE_NOTE if slugify(sci) in PALE else "")}]
     if ref:
         parts.append({"inline_data": {"mime_type": "image/jpeg", "data": base64.b64encode(shrink(ref, 384)).decode()}})
     else:
@@ -121,24 +133,31 @@ def cutout(raw_png: Path, colour_png: Path, mono_png: Path):
     full = np.stack([np.ones(h * w), (xx / w).ravel(), (yy / h).ravel(), ((xx / w) ** 2).ravel(), ((yy / h) ** 2).ravel()], axis=1)
     plane = (full @ coef).reshape(h, w, 3)
     dist = np.abs(rgb - plane).sum(axis=2)
-    passable = dist < 48          # within the paper's own texture of the fitted surface
-    # flood from the border through passable pixels
-    mask = np.zeros((h, w), dtype=bool)
-    from collections import deque
-    q = deque()
-    for x in range(w):
-        for y in (0, h - 1):
-            if passable[y, x] and not mask[y, x]: mask[y, x] = True; q.append((y, x))
-    for y in range(h):
-        for x in (0, w - 1):
-            if passable[y, x] and not mask[y, x]: mask[y, x] = True; q.append((y, x))
-    while q:
-        y, x = q.popleft()
-        for ny, nx in ((y-1, x), (y+1, x), (y, x-1), (y, x+1)):
-            if 0 <= ny < h and 0 <= nx < w and passable[ny, nx] and not mask[ny, nx]:
-                mask[ny, nx] = True; q.append((ny, nx))
-    fg = ~mask
+    passable = (dist < 48).astype(np.uint8)   # within the paper's own texture of the fitted surface
+    # outside: passable pixels connected to the border
+    n, lab = cv2.connectedComponents(passable, connectivity=4)
+    edge = np.unique(np.concatenate([lab[0], lab[-1], lab[:, 0], lab[:, -1]]))
+    outside = np.isin(lab, edge[edge > 0])
+    # enclosed paper between the legs: the flood cannot reach it. Colour alone
+    # cannot tell it from a white belly, because the model paints white plumage
+    # in the paper colour, so it is only removed in the leg zone: rows below the
+    # middle of the bird where the rest of it is narrow (legs, feet).
+    near = (cv2.blur(dist.astype(np.float32), (9, 9)) < 13) & (passable > 0) & ~outside
+    near = cv2.morphologyEx(near.astype(np.uint8), cv2.MORPH_OPEN, np.ones((5, 5), np.uint8))
+    n2, lab2, st2, _ = cv2.connectedComponentsWithStats(near, connectivity=4)
+    min_patch = 0.0005 * h * w
+    solid = ~outside & (near == 0)
+    row_w = solid.sum(axis=1)
+    leg_rows = row_w < 0.3 * max(row_w.max(), 1)
+    body_mid = np.nonzero(~outside)[0].mean() if (~outside).any() else h / 2
+    enclosed = np.zeros((h, w), dtype=bool)
+    for i in range(1, n2):
+        if st2[i, cv2.CC_STAT_AREA] < min_patch: continue
+        ys = np.nonzero(lab2 == i)[0]
+        if leg_rows[ys].mean() >= 0.7 and np.median(ys) > body_mid: enclosed |= lab2 == i
+    fg = ~(outside | enclosed)
     fg = keep_main_components(fg)
+    fg = fill_small_holes(fg, min_patch)
     alpha = Image.fromarray((fg * 255).astype(np.uint8))
     alpha = alpha.filter(ImageFilter.MinFilter(3)).filter(ImageFilter.GaussianBlur(1.2))
     out = im.copy(); out.putalpha(alpha)
@@ -153,25 +172,20 @@ def cutout(raw_png: Path, colour_png: Path, mono_png: Path):
 def keep_main_components(fg, keep_ratio=0.04):
     """Drop stray blobs: keep the largest connected region and anything at least
     keep_ratio of its area (detached tail-tips, feet)."""
-    h, w = fg.shape
-    labels = np.zeros((h, w), dtype=np.int32)
-    sizes = []
-    from collections import deque
-    cur = 0
-    ys, xs = np.nonzero(fg)
-    for y0, x0 in zip(ys, xs):
-        if labels[y0, x0]: continue
-        cur += 1; n = 0; q = deque([(y0, x0)]); labels[y0, x0] = cur
-        while q:
-            y, x = q.popleft(); n += 1
-            for ny, nx in ((y-1, x), (y+1, x), (y, x-1), (y, x+1)):
-                if 0 <= ny < h and 0 <= nx < w and fg[ny, nx] and not labels[ny, nx]:
-                    labels[ny, nx] = cur; q.append((ny, nx))
-        sizes.append(n)
-    if not sizes: return fg
-    big = max(sizes)
-    keep = {i+1 for i, n in enumerate(sizes) if n >= keep_ratio * big}
-    return np.isin(labels, list(keep))
+    n, lab, st, _ = cv2.connectedComponentsWithStats(fg.astype(np.uint8), connectivity=4)
+    if n <= 1: return fg
+    sizes = st[1:, cv2.CC_STAT_AREA]; big = sizes.max()
+    return np.isin(lab, [i + 1 for i, a in enumerate(sizes) if a >= keep_ratio * big])
+
+
+def fill_small_holes(fg, max_area):
+    """Close pin-pricks inside the bird (background pockets not touching the edge
+    and smaller than max_area), leaving the real gaps opened above alone."""
+    bg = (~fg).astype(np.uint8)
+    n, lab, st, _ = cv2.connectedComponentsWithStats(bg, connectivity=4)
+    edge = set(np.unique(np.concatenate([lab[0], lab[-1], lab[:, 0], lab[:, -1]])))
+    small = [i for i in range(1, n) if i not in edge and st[i, cv2.CC_STAT_AREA] < max_area]
+    return fg | np.isin(lab, small)
 
 
 def make_mono(rgba, mono_png, levels=5):
