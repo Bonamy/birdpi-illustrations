@@ -42,6 +42,13 @@
   "source": "avianvisitors",
   "variant": "illustrations"
  },
+ "ardea-cinerea": {
+  "common": "Grey Heron",
+  "generated": "2026-09-15",
+  "model": "gemini-2.5-flash-image",
+  "reference_photo": true,
+  "scientific": "Ardea cinerea"
+ },
  "asio-flammeus": {
   "common": "Short-eared Owl",
   "scientific": "Asio flammeus",
@@ -54,6 +61,13 @@
   "model": "gemini-2.5-flash-image",
   "reference_photo": true,
   "scientific": "Athene noctua"
+ },
+ "botaurus-stellaris": {
+  "common": "Great Bittern",
+  "generated": "2026-09-15",
+  "model": "gemini-2.5-flash-image",
+  "reference_photo": true,
+  "scientific": "Botaurus stellaris"
  },
  "branta-canadensis": {
   "common": "Canada Goose",
@@ -85,17 +99,52 @@
   "source": "avianvisitors",
   "variant": "illustrations"
  },
+ "chroicocephalus-ridibundus": {
+  "common": "Black-headed Gull",
+  "generated": "2026-09-15",
+  "model": "gemini-2.5-flash-image",
+  "reference_photo": true,
+  "scientific": "Chroicocephalus ridibundus"
+ },
  "columba-livia": {
   "common": "Rock Dove",
   "scientific": "Columba livia",
   "source": "avianvisitors",
   "variant": "cutouts"
  },
+ "columba-palumbus": {
+  "common": "Common Woodpigeon",
+  "generated": "2026-09-15",
+  "model": "gemini-2.5-flash-image",
+  "reference_photo": true,
+  "scientific": "Columba palumbus"
+ },
  "corvus-corax": {
   "common": "Common Raven",
   "scientific": "Corvus corax",
   "source": "avianvisitors",
   "variant": "cutouts"
+ },
+ "corvus-corone": {
+  "common": "Carrion Crow",
+  "generated": "2026-09-15",
+  "model": "gemini-2.5-flash-image",
+  "reference_photo": true,
+  "scientific": "Corvus corone"
+ },
+ "corvus-monedula": {
+  "common": "Eurasian Jackdaw",
+  "generated": "2026-09-15",
+  "model": "gemini-2.5-flash-image",
+  "reference_photo": true,
+  "scientific": "Corvus monedula"
+ },
+ "cyanistes-caeruleus": {
+  "common": "Eurasian Blue Tit",
+  "generated": "2026-09-15",
+  "model": "gemini-2.5-flash-image",
+  "reference_photo": true,
+  "scientific": "Cyanistes caeruleus"
  },
  "cygnus-olor": {
   "common": "Mute Swan",
@@ -158,11 +207,25 @@
   "source": "avianvisitors",
   "variant": "illustrations"
  },
+ "motacilla-alba": {
+  "common": "Pied Wagtail/White Wagtail",
+  "generated": "2026-09-15",
+  "model": "gemini-2.5-flash-image",
+  "reference_photo": true,
+  "scientific": "Motacilla alba"
+ },
  "pandion-haliaetus": {
   "common": "Osprey",
   "scientific": "Pandion haliaetus",
   "source": "avianvisitors",
   "variant": "illustrations"
+ },
+ "parus-major": {
+  "common": "Great Tit",
+  "generated": "2026-09-15",
+  "model": "gemini-2.5-flash-image",
+  "reference_photo": true,
+  "scientific": "Parus major"
  },
  "passer-domesticus": {
   "common": "House Sparrow",
@@ -170,11 +233,25 @@
   "source": "avianvisitors",
   "variant": "cutouts"
  },
+ "phalacrocorax-carbo": {
+  "common": "Great Cormorant",
+  "generated": "2026-09-15",
+  "model": "gemini-2.5-flash-image",
+  "reference_photo": true,
+  "scientific": "Phalacrocorax carbo"
+ },
  "phasianus-colchicus": {
   "common": "Common Pheasant",
   "scientific": "Phasianus colchicus",
   "source": "avianvisitors",
   "variant": "illustrations"
+ },
+ "pica-pica": {
+  "common": "Common Magpie",
+  "generated": "2026-09-15",
+  "model": "gemini-2.5-flash-image",
+  "reference_photo": true,
+  "scientific": "Pica pica"
  },
  "pluvialis-squatarola": {
   "common": "Grey Plover",
