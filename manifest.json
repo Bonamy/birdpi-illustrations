@@ -1,9 +1,44 @@
 {
+ "acanthis-cabaret": {
+  "common": "Lesser Redpoll",
+  "generated": "2026-09-15",
+  "model": "gemini-2.5-flash-image",
+  "reference_photo": false,
+  "scientific": "Acanthis cabaret"
+ },
  "accipiter-gentilis": {
   "common": "Eurasian Goshawk",
   "scientific": "Accipiter gentilis",
   "source": "avianvisitors",
   "variant": "illustrations"
+ },
+ "accipiter-nisus": {
+  "common": "Eurasian Sparrowhawk",
+  "generated": "2026-09-15",
+  "model": "gemini-2.5-flash-image",
+  "reference_photo": true,
+  "scientific": "Accipiter nisus"
+ },
+ "acrocephalus-schoenobaenus": {
+  "common": "Sedge Warbler",
+  "generated": "2026-09-15",
+  "model": "gemini-2.5-flash-image",
+  "reference_photo": false,
+  "scientific": "Acrocephalus schoenobaenus"
+ },
+ "acrocephalus-scirpaceus": {
+  "common": "Common Reed Warbler",
+  "generated": "2026-09-15",
+  "model": "gemini-2.5-flash-image",
+  "reference_photo": false,
+  "scientific": "Acrocephalus scirpaceus"
+ },
+ "actitis-hypoleucos": {
+  "common": "Common Sandpiper",
+  "generated": "2026-09-15",
+  "model": "gemini-2.5-flash-image",
+  "reference_photo": false,
+  "scientific": "Actitis hypoleucos"
  },
  "aegithalos-caudatus": {
   "common": "Long-tailed Tit",
@@ -11,6 +46,41 @@
   "model": "gemini-2.5-flash-image",
   "reference_photo": true,
   "scientific": "Aegithalos caudatus"
+ },
+ "alauda-arvensis": {
+  "common": "Eurasian Skylark",
+  "generated": "2026-09-15",
+  "model": "gemini-2.5-flash-image",
+  "reference_photo": false,
+  "scientific": "Alauda arvensis"
+ },
+ "alca-torda": {
+  "common": "Razorbill",
+  "generated": "2026-09-15",
+  "model": "gemini-2.5-flash-image",
+  "reference_photo": false,
+  "scientific": "Alca torda"
+ },
+ "alcedo-atthis": {
+  "common": "Common Kingfisher",
+  "generated": "2026-09-15",
+  "model": "gemini-2.5-flash-image",
+  "reference_photo": true,
+  "scientific": "Alcedo atthis"
+ },
+ "alectoris-rufa": {
+  "common": "Red-legged Partridge",
+  "generated": "2026-09-15",
+  "model": "gemini-2.5-flash-image",
+  "reference_photo": false,
+  "scientific": "Alectoris rufa"
+ },
+ "alopochen-aegyptiaca": {
+  "common": "Egyptian Goose",
+  "generated": "2026-09-15",
+  "model": "gemini-2.5-flash-image",
+  "reference_photo": true,
+  "scientific": "Alopochen aegyptiaca"
  },
  "anas-acuta": {
   "common": "Northern Pintail",
@@ -36,6 +106,48 @@
   "source": "avianvisitors",
   "variant": "illustrations"
  },
+ "anser-anser": {
+  "common": "Greylag Goose",
+  "generated": "2026-09-15",
+  "model": "gemini-2.5-flash-image",
+  "reference_photo": true,
+  "scientific": "Anser anser"
+ },
+ "anser-brachyrhynchus": {
+  "common": "Pink-footed Goose",
+  "generated": "2026-09-15",
+  "model": "gemini-2.5-flash-image",
+  "reference_photo": false,
+  "scientific": "Anser brachyrhynchus"
+ },
+ "anthus-petrosus": {
+  "common": "Rock Pipit",
+  "generated": "2026-09-15",
+  "model": "gemini-2.5-flash-image",
+  "reference_photo": false,
+  "scientific": "Anthus petrosus"
+ },
+ "anthus-pratensis": {
+  "common": "Meadow Pipit",
+  "generated": "2026-09-15",
+  "model": "gemini-2.5-flash-image",
+  "reference_photo": true,
+  "scientific": "Anthus pratensis"
+ },
+ "anthus-trivialis": {
+  "common": "Tree Pipit",
+  "generated": "2026-09-15",
+  "model": "gemini-2.5-flash-image",
+  "reference_photo": true,
+  "scientific": "Anthus trivialis"
+ },
+ "apus-apus": {
+  "common": "Common Swift",
+  "generated": "2026-09-15",
+  "model": "gemini-2.5-flash-image",
+  "reference_photo": true,
+  "scientific": "Apus apus"
+ },
  "ardea-alba": {
   "common": "Great White Egret",
   "scientific": "Ardea alba",
@@ -48,6 +160,13 @@
   "model": "gemini-2.5-flash-image",
   "reference_photo": true,
   "scientific": "Ardea cinerea"
+ },
+ "arenaria-interpres": {
+  "common": "Ruddy Turnstone",
+  "generated": "2026-09-15",
+  "model": "gemini-2.5-flash-image",
+  "reference_photo": false,
+  "scientific": "Arenaria interpres"
  },
  "asio-flammeus": {
   "common": "Short-eared Owl",
@@ -62,6 +181,20 @@
   "reference_photo": true,
   "scientific": "Athene noctua"
  },
+ "aythya-ferina": {
+  "common": "Common Pochard",
+  "generated": "2026-09-15",
+  "model": "gemini-2.5-flash-image",
+  "reference_photo": true,
+  "scientific": "Aythya ferina"
+ },
+ "aythya-fuligula": {
+  "common": "Tufted Duck",
+  "generated": "2026-09-15",
+  "model": "gemini-2.5-flash-image",
+  "reference_photo": true,
+  "scientific": "Aythya fuligula"
+ },
  "botaurus-stellaris": {
   "common": "Great Bittern",
   "generated": "2026-09-15",
@@ -69,11 +202,25 @@
   "reference_photo": true,
   "scientific": "Botaurus stellaris"
  },
+ "branta-bernicla": {
+  "common": "Brent Goose",
+  "generated": "2026-09-15",
+  "model": "gemini-2.5-flash-image",
+  "reference_photo": true,
+  "scientific": "Branta bernicla"
+ },
  "branta-canadensis": {
   "common": "Canada Goose",
   "scientific": "Branta canadensis",
   "source": "avianvisitors",
   "variant": "cutouts"
+ },
+ "branta-leucopsis": {
+  "common": "Barnacle Goose",
+  "generated": "2026-09-15",
+  "model": "gemini-2.5-flash-image",
+  "reference_photo": false,
+  "scientific": "Branta leucopsis"
  },
  "bubulcus-ibis": {
   "common": "Western Cattle-Egret",
@@ -87,6 +234,13 @@
   "source": "avianvisitors",
   "variant": "cutouts"
  },
+ "buteo-buteo": {
+  "common": "Common Buzzard",
+  "generated": "2026-09-15",
+  "model": "gemini-2.5-flash-image",
+  "reference_photo": true,
+  "scientific": "Buteo buteo"
+ },
  "calidris-alba": {
   "common": "Sanderling",
   "scientific": "Calidris alba",
@@ -99,6 +253,83 @@
   "source": "avianvisitors",
   "variant": "illustrations"
  },
+ "calidris-canutus": {
+  "common": "Red Knot",
+  "generated": "2026-09-15",
+  "model": "gemini-2.5-flash-image",
+  "reference_photo": true,
+  "scientific": "Calidris canutus"
+ },
+ "calidris-ferruginea": {
+  "common": "Curlew Sandpiper",
+  "generated": "2026-09-15",
+  "model": "gemini-2.5-flash-image",
+  "reference_photo": false,
+  "scientific": "Calidris ferruginea"
+ },
+ "calidris-minuta": {
+  "common": "Little Stint",
+  "generated": "2026-09-15",
+  "model": "gemini-2.5-flash-image",
+  "reference_photo": true,
+  "scientific": "Calidris minuta"
+ },
+ "calidris-pugnax": {
+  "common": "Ruff",
+  "generated": "2026-09-15",
+  "model": "gemini-2.5-flash-image",
+  "reference_photo": false,
+  "scientific": "Calidris pugnax"
+ },
+ "carduelis-carduelis": {
+  "common": "European Goldfinch",
+  "generated": "2026-09-15",
+  "model": "gemini-2.5-flash-image",
+  "reference_photo": true,
+  "scientific": "Carduelis carduelis"
+ },
+ "certhia-brachydactyla": {
+  "common": "Short-toed Treecreeper",
+  "generated": "2026-09-15",
+  "model": "gemini-2.5-flash-image",
+  "reference_photo": false,
+  "scientific": "Certhia brachydactyla"
+ },
+ "certhia-familiaris": {
+  "common": "Eurasian Treecreeper",
+  "generated": "2026-09-15",
+  "model": "gemini-2.5-flash-image",
+  "reference_photo": false,
+  "scientific": "Certhia familiaris"
+ },
+ "cettia-cetti": {
+  "common": "Cetti's Warbler",
+  "generated": "2026-09-15",
+  "model": "gemini-2.5-flash-image",
+  "reference_photo": false,
+  "scientific": "Cettia cetti"
+ },
+ "charadrius-dubius": {
+  "common": "Little Ringed Plover",
+  "generated": "2026-09-15",
+  "model": "gemini-2.5-flash-image",
+  "reference_photo": false,
+  "scientific": "Charadrius dubius"
+ },
+ "charadrius-hiaticula": {
+  "common": "Common Ringed Plover",
+  "generated": "2026-09-15",
+  "model": "gemini-2.5-flash-image",
+  "reference_photo": true,
+  "scientific": "Charadrius hiaticula"
+ },
+ "chloris-chloris": {
+  "common": "European Greenfinch",
+  "generated": "2026-09-15",
+  "model": "gemini-2.5-flash-image",
+  "reference_photo": true,
+  "scientific": "Chloris chloris"
+ },
  "chroicocephalus-ridibundus": {
   "common": "Black-headed Gull",
   "generated": "2026-09-15",
@@ -106,11 +337,53 @@
   "reference_photo": true,
   "scientific": "Chroicocephalus ridibundus"
  },
+ "cinclus-cinclus": {
+  "common": "White-throated Dipper",
+  "generated": "2026-09-15",
+  "model": "gemini-2.5-flash-image",
+  "reference_photo": false,
+  "scientific": "Cinclus cinclus"
+ },
+ "circus-aeruginosus": {
+  "common": "Western Marsh Harrier",
+  "generated": "2026-09-15",
+  "model": "gemini-2.5-flash-image",
+  "reference_photo": true,
+  "scientific": "Circus aeruginosus"
+ },
+ "circus-cyaneus": {
+  "common": "Hen Harrier",
+  "generated": "2026-09-15",
+  "model": "gemini-2.5-flash-image",
+  "reference_photo": false,
+  "scientific": "Circus cyaneus"
+ },
+ "cisticola-juncidis": {
+  "common": "Zitting Cisticola",
+  "generated": "2026-09-15",
+  "model": "gemini-2.5-flash-image",
+  "reference_photo": false,
+  "scientific": "Cisticola juncidis"
+ },
+ "coccothraustes-coccothraustes": {
+  "common": "Hawfinch",
+  "generated": "2026-09-15",
+  "model": "gemini-2.5-flash-image",
+  "reference_photo": true,
+  "scientific": "Coccothraustes coccothraustes"
+ },
  "columba-livia": {
   "common": "Rock Dove",
   "scientific": "Columba livia",
   "source": "avianvisitors",
   "variant": "cutouts"
+ },
+ "columba-oenas": {
+  "common": "Stock Dove",
+  "generated": "2026-09-15",
+  "model": "gemini-2.5-flash-image",
+  "reference_photo": true,
+  "scientific": "Columba oenas"
  },
  "columba-palumbus": {
   "common": "Common Woodpigeon",
@@ -125,12 +398,26 @@
   "source": "avianvisitors",
   "variant": "cutouts"
  },
+ "corvus-cornix": {
+  "common": "Hooded Crow",
+  "generated": "2026-09-15",
+  "model": "gemini-2.5-flash-image",
+  "reference_photo": true,
+  "scientific": "Corvus cornix"
+ },
  "corvus-corone": {
   "common": "Carrion Crow",
   "generated": "2026-09-15",
   "model": "gemini-2.5-flash-image",
   "reference_photo": true,
   "scientific": "Corvus corone"
+ },
+ "corvus-frugilegus": {
+  "common": "Rook",
+  "generated": "2026-09-15",
+  "model": "gemini-2.5-flash-image",
+  "reference_photo": true,
+  "scientific": "Corvus frugilegus"
  },
  "corvus-monedula": {
   "common": "Eurasian Jackdaw",
@@ -139,6 +426,20 @@
   "reference_photo": true,
   "scientific": "Corvus monedula"
  },
+ "curruca-communis": {
+  "common": "Common Whitethroat",
+  "generated": "2026-09-15",
+  "model": "gemini-2.5-flash-image",
+  "reference_photo": false,
+  "scientific": "Curruca communis"
+ },
+ "curruca-curruca": {
+  "common": "Lesser Whitethroat",
+  "generated": "2026-09-15",
+  "model": "gemini-2.5-flash-image",
+  "reference_photo": false,
+  "scientific": "Curruca curruca"
+ },
  "cyanistes-caeruleus": {
   "common": "Eurasian Blue Tit",
   "generated": "2026-09-15",
@@ -146,11 +447,67 @@
   "reference_photo": true,
   "scientific": "Cyanistes caeruleus"
  },
+ "cygnus-cygnus": {
+  "common": "Whooper Swan",
+  "generated": "2026-09-15",
+  "model": "gemini-2.5-flash-image",
+  "reference_photo": false,
+  "scientific": "Cygnus cygnus"
+ },
  "cygnus-olor": {
   "common": "Mute Swan",
   "scientific": "Cygnus olor",
   "source": "avianvisitors",
   "variant": "illustrations"
+ },
+ "delichon-urbicum": {
+  "common": "Western House Martin",
+  "generated": "2026-09-15",
+  "model": "gemini-2.5-flash-image",
+  "reference_photo": true,
+  "scientific": "Delichon urbicum"
+ },
+ "dendrocopos-major": {
+  "common": "Great Spotted Woodpecker",
+  "generated": "2026-09-15",
+  "model": "gemini-2.5-flash-image",
+  "reference_photo": true,
+  "scientific": "Dendrocopos major"
+ },
+ "dryobates-minor": {
+  "common": "Lesser Spotted Woodpecker",
+  "generated": "2026-09-15",
+  "model": "gemini-2.5-flash-image",
+  "reference_photo": false,
+  "scientific": "Dryobates minor"
+ },
+ "egretta-garzetta": {
+  "common": "Little Egret",
+  "generated": "2026-09-15",
+  "model": "gemini-2.5-flash-image",
+  "reference_photo": true,
+  "scientific": "Egretta garzetta"
+ },
+ "emberiza-cirlus": {
+  "common": "Cirl Bunting",
+  "generated": "2026-09-15",
+  "model": "gemini-2.5-flash-image",
+  "reference_photo": false,
+  "scientific": "Emberiza cirlus"
+ },
+ "emberiza-citrinella": {
+  "common": "Yellowhammer",
+  "generated": "2026-09-15",
+  "model": "gemini-2.5-flash-image",
+  "reference_photo": false,
+  "scientific": "Emberiza citrinella"
+ },
+ "emberiza-schoeniclus": {
+  "common": "Common Reed Bunting",
+  "generated": "2026-09-15",
+  "model": "gemini-2.5-flash-image",
+  "reference_photo": true,
+  "scientific": "Emberiza schoeniclus"
  },
  "erithacus-rubecula": {
   "common": "European Robin",
@@ -171,11 +528,130 @@
   "source": "avianvisitors",
   "variant": "illustrations"
  },
+ "falco-subbuteo": {
+  "common": "Eurasian Hobby",
+  "generated": "2026-09-15",
+  "model": "gemini-2.5-flash-image",
+  "reference_photo": true,
+  "scientific": "Falco subbuteo"
+ },
+ "falco-tinnunculus": {
+  "common": "Common Kestrel",
+  "generated": "2026-09-15",
+  "model": "gemini-2.5-flash-image",
+  "reference_photo": true,
+  "scientific": "Falco tinnunculus"
+ },
+ "ficedula-hypoleuca": {
+  "common": "European Pied Flycatcher",
+  "generated": "2026-09-15",
+  "model": "gemini-2.5-flash-image",
+  "reference_photo": true,
+  "scientific": "Ficedula hypoleuca"
+ },
+ "fringilla-coelebs": {
+  "common": "Common Chaffinch",
+  "generated": "2026-09-15",
+  "model": "gemini-2.5-flash-image",
+  "reference_photo": true,
+  "scientific": "Fringilla coelebs"
+ },
+ "fringilla-montifringilla": {
+  "common": "Brambling",
+  "generated": "2026-09-15",
+  "model": "gemini-2.5-flash-image",
+  "reference_photo": false,
+  "scientific": "Fringilla montifringilla"
+ },
+ "fulica-atra": {
+  "common": "Eurasian Coot",
+  "generated": "2026-09-15",
+  "model": "gemini-2.5-flash-image",
+  "reference_photo": true,
+  "scientific": "Fulica atra"
+ },
+ "fulmarus-glacialis": {
+  "common": "Northern Fulmar",
+  "generated": "2026-09-15",
+  "model": "gemini-2.5-flash-image",
+  "reference_photo": true,
+  "scientific": "Fulmarus glacialis"
+ },
+ "gallinago-gallinago": {
+  "common": "Common Snipe",
+  "generated": "2026-09-15",
+  "model": "gemini-2.5-flash-image",
+  "reference_photo": true,
+  "scientific": "Gallinago gallinago"
+ },
+ "gallinula-chloropus": {
+  "common": "Common Moorhen",
+  "generated": "2026-09-15",
+  "model": "gemini-2.5-flash-image",
+  "reference_photo": true,
+  "scientific": "Gallinula chloropus"
+ },
+ "garrulus-glandarius": {
+  "common": "Eurasian Jay",
+  "generated": "2026-09-15",
+  "model": "gemini-2.5-flash-image",
+  "reference_photo": true,
+  "scientific": "Garrulus glandarius"
+ },
+ "gavia-stellata": {
+  "common": "Red-throated Diver",
+  "generated": "2026-09-15",
+  "model": "gemini-2.5-flash-image",
+  "reference_photo": true,
+  "scientific": "Gavia stellata"
+ },
+ "grus-grus": {
+  "common": "Common Crane",
+  "generated": "2026-09-15",
+  "model": "gemini-2.5-flash-image",
+  "reference_photo": true,
+  "scientific": "Grus grus"
+ },
+ "haematopus-ostralegus": {
+  "common": "Eurasian Oystercatcher",
+  "generated": "2026-09-15",
+  "model": "gemini-2.5-flash-image",
+  "reference_photo": true,
+  "scientific": "Haematopus ostralegus"
+ },
+ "haliaeetus-albicilla": {
+  "common": "White-tailed Eagle",
+  "generated": "2026-09-15",
+  "model": "gemini-2.5-flash-image",
+  "reference_photo": false,
+  "scientific": "Haliaeetus albicilla"
+ },
+ "himantopus-himantopus": {
+  "common": "Black-winged Stilt",
+  "generated": "2026-09-15",
+  "model": "gemini-2.5-flash-image",
+  "reference_photo": true,
+  "scientific": "Himantopus himantopus"
+ },
  "hirundo-rustica": {
   "common": "Barn Swallow",
   "scientific": "Hirundo rustica",
   "source": "avianvisitors",
   "variant": "cutouts"
+ },
+ "hydrocoloeus-minutus": {
+  "common": "Little Gull",
+  "generated": "2026-09-15",
+  "model": "gemini-2.5-flash-image",
+  "reference_photo": false,
+  "scientific": "Hydrocoloeus minutus"
+ },
+ "ichthyaetus-melanocephalus": {
+  "common": "Mediterranean Gull",
+  "generated": "2026-09-15",
+  "model": "gemini-2.5-flash-image",
+  "reference_photo": true,
+  "scientific": "Ichthyaetus melanocephalus"
  },
  "larus-argentatus": {
   "common": "Herring Gull",
@@ -183,11 +659,67 @@
   "source": "avianvisitors",
   "variant": "illustrations"
  },
+ "larus-cachinnans": {
+  "common": "Caspian Gull",
+  "generated": "2026-09-15",
+  "model": "gemini-2.5-flash-image",
+  "reference_photo": false,
+  "scientific": "Larus cachinnans"
+ },
+ "larus-canus": {
+  "common": "Common Gull",
+  "generated": "2026-09-15",
+  "model": "gemini-2.5-flash-image",
+  "reference_photo": true,
+  "scientific": "Larus canus"
+ },
+ "larus-fuscus": {
+  "common": "Lesser Black-backed Gull",
+  "generated": "2026-09-15",
+  "model": "gemini-2.5-flash-image",
+  "reference_photo": true,
+  "scientific": "Larus fuscus"
+ },
  "larus-marinus": {
   "common": "Great Black-backed Gull",
   "scientific": "Larus marinus",
   "source": "avianvisitors",
   "variant": "illustrations"
+ },
+ "larus-michahellis": {
+  "common": "Yellow-legged Gull",
+  "generated": "2026-09-15",
+  "model": "gemini-2.5-flash-image",
+  "reference_photo": true,
+  "scientific": "Larus michahellis"
+ },
+ "limosa-lapponica": {
+  "common": "Bar-tailed Godwit",
+  "generated": "2026-09-15",
+  "model": "gemini-2.5-flash-image",
+  "reference_photo": false,
+  "scientific": "Limosa lapponica"
+ },
+ "limosa-limosa": {
+  "common": "Black-tailed Godwit",
+  "generated": "2026-09-15",
+  "model": "gemini-2.5-flash-image",
+  "reference_photo": false,
+  "scientific": "Limosa limosa"
+ },
+ "linaria-cannabina": {
+  "common": "Common Linnet",
+  "generated": "2026-09-15",
+  "model": "gemini-2.5-flash-image",
+  "reference_photo": true,
+  "scientific": "Linaria cannabina"
+ },
+ "lophophanes-cristatus": {
+  "common": "Crested Tit",
+  "generated": "2026-09-15",
+  "model": "gemini-2.5-flash-image",
+  "reference_photo": true,
+  "scientific": "Lophophanes cristatus"
  },
  "loxia-curvirostra": {
   "common": "Common Crossbill",
@@ -195,17 +727,59 @@
   "source": "avianvisitors",
   "variant": "cutouts"
  },
+ "luscinia-svecica": {
+  "common": "Bluethroat",
+  "generated": "2026-09-15",
+  "model": "gemini-2.5-flash-image",
+  "reference_photo": true,
+  "scientific": "Luscinia svecica"
+ },
+ "mareca-penelope": {
+  "common": "Eurasian Wigeon",
+  "generated": "2026-09-15",
+  "model": "gemini-2.5-flash-image",
+  "reference_photo": true,
+  "scientific": "Mareca penelope"
+ },
  "mareca-strepera": {
   "common": "Gadwall",
   "scientific": "Mareca strepera",
   "source": "avianvisitors",
   "variant": "illustrations"
  },
+ "melanitta-nigra": {
+  "common": "Common Scoter",
+  "generated": "2026-09-15",
+  "model": "gemini-2.5-flash-image",
+  "reference_photo": false,
+  "scientific": "Melanitta nigra"
+ },
  "mergus-merganser": {
   "common": "Goosander",
   "scientific": "Mergus merganser",
   "source": "avianvisitors",
   "variant": "illustrations"
+ },
+ "mergus-serrator": {
+  "common": "Red-breasted Merganser",
+  "generated": "2026-09-15",
+  "model": "gemini-2.5-flash-image",
+  "reference_photo": true,
+  "scientific": "Mergus serrator"
+ },
+ "milvus-milvus": {
+  "common": "Red Kite",
+  "generated": "2026-09-15",
+  "model": "gemini-2.5-flash-image",
+  "reference_photo": true,
+  "scientific": "Milvus milvus"
+ },
+ "morus-bassanus": {
+  "common": "Northern Gannet",
+  "generated": "2026-09-15",
+  "model": "gemini-2.5-flash-image",
+  "reference_photo": false,
+  "scientific": "Morus bassanus"
  },
  "motacilla-alba": {
   "common": "Pied Wagtail/White Wagtail",
@@ -214,11 +788,60 @@
   "reference_photo": true,
   "scientific": "Motacilla alba"
  },
+ "motacilla-cinerea": {
+  "common": "Grey Wagtail",
+  "generated": "2026-09-15",
+  "model": "gemini-2.5-flash-image",
+  "reference_photo": true,
+  "scientific": "Motacilla cinerea"
+ },
+ "motacilla-flava": {
+  "common": "Western Yellow Wagtail",
+  "generated": "2026-09-15",
+  "model": "gemini-2.5-flash-image",
+  "reference_photo": true,
+  "scientific": "Motacilla flava"
+ },
+ "muscicapa-striata": {
+  "common": "Spotted Flycatcher",
+  "generated": "2026-09-15",
+  "model": "gemini-2.5-flash-image",
+  "reference_photo": true,
+  "scientific": "Muscicapa striata"
+ },
+ "numenius-arquata": {
+  "common": "Eurasian Curlew",
+  "generated": "2026-09-15",
+  "model": "gemini-2.5-flash-image",
+  "reference_photo": true,
+  "scientific": "Numenius arquata"
+ },
+ "numenius-phaeopus": {
+  "common": "Whimbrel",
+  "generated": "2026-09-15",
+  "model": "gemini-2.5-flash-image",
+  "reference_photo": false,
+  "scientific": "Numenius phaeopus"
+ },
+ "oenanthe-oenanthe": {
+  "common": "Northern Wheatear",
+  "generated": "2026-09-15",
+  "model": "gemini-2.5-flash-image",
+  "reference_photo": false,
+  "scientific": "Oenanthe oenanthe"
+ },
  "pandion-haliaetus": {
   "common": "Osprey",
   "scientific": "Pandion haliaetus",
   "source": "avianvisitors",
   "variant": "illustrations"
+ },
+ "panurus-biarmicus": {
+  "common": "Bearded Tit",
+  "generated": "2026-09-15",
+  "model": "gemini-2.5-flash-image",
+  "reference_photo": true,
+  "scientific": "Panurus biarmicus"
  },
  "parus-major": {
   "common": "Great Tit",
@@ -233,6 +856,34 @@
   "source": "avianvisitors",
   "variant": "cutouts"
  },
+ "passer-montanus": {
+  "common": "Eurasian Tree Sparrow",
+  "generated": "2026-09-15",
+  "model": "gemini-2.5-flash-image",
+  "reference_photo": true,
+  "scientific": "Passer montanus"
+ },
+ "perdix-perdix": {
+  "common": "Grey Partridge",
+  "generated": "2026-09-15",
+  "model": "gemini-2.5-flash-image",
+  "reference_photo": false,
+  "scientific": "Perdix perdix"
+ },
+ "periparus-ater": {
+  "common": "Coal Tit",
+  "generated": "2026-09-15",
+  "model": "gemini-2.5-flash-image",
+  "reference_photo": true,
+  "scientific": "Periparus ater"
+ },
+ "pernis-apivorus": {
+  "common": "European Honey-buzzard",
+  "generated": "2026-09-15",
+  "model": "gemini-2.5-flash-image",
+  "reference_photo": false,
+  "scientific": "Pernis apivorus"
+ },
  "phalacrocorax-carbo": {
   "common": "Great Cormorant",
   "generated": "2026-09-15",
@@ -246,6 +897,41 @@
   "source": "avianvisitors",
   "variant": "illustrations"
  },
+ "phoenicurus-ochruros": {
+  "common": "Black Redstart",
+  "generated": "2026-09-15",
+  "model": "gemini-2.5-flash-image",
+  "reference_photo": false,
+  "scientific": "Phoenicurus ochruros"
+ },
+ "phoenicurus-phoenicurus": {
+  "common": "Common Redstart",
+  "generated": "2026-09-15",
+  "model": "gemini-2.5-flash-image",
+  "reference_photo": false,
+  "scientific": "Phoenicurus phoenicurus"
+ },
+ "phylloscopus-collybita": {
+  "common": "Common Chiffchaff",
+  "generated": "2026-09-15",
+  "model": "gemini-2.5-flash-image",
+  "reference_photo": true,
+  "scientific": "Phylloscopus collybita"
+ },
+ "phylloscopus-inornatus": {
+  "common": "Yellow-browed Warbler",
+  "generated": "2026-09-15",
+  "model": "gemini-2.5-flash-image",
+  "reference_photo": false,
+  "scientific": "Phylloscopus inornatus"
+ },
+ "phylloscopus-trochilus": {
+  "common": "Willow Warbler",
+  "generated": "2026-09-15",
+  "model": "gemini-2.5-flash-image",
+  "reference_photo": false,
+  "scientific": "Phylloscopus trochilus"
+ },
  "pica-pica": {
   "common": "Common Magpie",
   "generated": "2026-09-15",
@@ -253,17 +939,115 @@
   "reference_photo": true,
   "scientific": "Pica pica"
  },
+ "picus-viridis": {
+  "common": "Eurasian Green Woodpecker",
+  "generated": "2026-09-15",
+  "model": "gemini-2.5-flash-image",
+  "reference_photo": true,
+  "scientific": "Picus viridis"
+ },
+ "platalea-leucorodia": {
+  "common": "Eurasian Spoonbill",
+  "generated": "2026-09-15",
+  "model": "gemini-2.5-flash-image",
+  "reference_photo": false,
+  "scientific": "Platalea leucorodia"
+ },
+ "pluvialis-apricaria": {
+  "common": "European Golden Plover",
+  "generated": "2026-09-15",
+  "model": "gemini-2.5-flash-image",
+  "reference_photo": true,
+  "scientific": "Pluvialis apricaria"
+ },
  "pluvialis-squatarola": {
   "common": "Grey Plover",
   "scientific": "Pluvialis squatarola",
   "source": "avianvisitors",
   "variant": "illustrations"
  },
+ "podiceps-auritus": {
+  "common": "Slavonian Grebe",
+  "generated": "2026-09-15",
+  "model": "gemini-2.5-flash-image",
+  "reference_photo": false,
+  "scientific": "Podiceps auritus"
+ },
+ "podiceps-cristatus": {
+  "common": "Great Crested Grebe",
+  "generated": "2026-09-15",
+  "model": "gemini-2.5-flash-image",
+  "reference_photo": true,
+  "scientific": "Podiceps cristatus"
+ },
  "podiceps-nigricollis": {
   "common": "Black-necked Grebe",
   "scientific": "Podiceps nigricollis",
   "source": "avianvisitors",
   "variant": "illustrations"
+ },
+ "poecile-palustris": {
+  "common": "Marsh Tit",
+  "generated": "2026-09-15",
+  "model": "gemini-2.5-flash-image",
+  "reference_photo": false,
+  "scientific": "Poecile palustris"
+ },
+ "prunella-modularis": {
+  "common": "Dunnock",
+  "generated": "2026-09-15",
+  "model": "gemini-2.5-flash-image",
+  "reference_photo": true,
+  "scientific": "Prunella modularis"
+ },
+ "psittacula-krameri": {
+  "common": "Ring-necked Parakeet",
+  "generated": "2026-09-15",
+  "model": "gemini-2.5-flash-image",
+  "reference_photo": true,
+  "scientific": "Psittacula krameri"
+ },
+ "puffinus-puffinus": {
+  "common": "Manx Shearwater",
+  "generated": "2026-09-15",
+  "model": "gemini-2.5-flash-image",
+  "reference_photo": true,
+  "scientific": "Puffinus puffinus"
+ },
+ "pyrrhocorax-pyrrhocorax": {
+  "common": "Red-billed Chough",
+  "generated": "2026-09-15",
+  "model": "gemini-2.5-flash-image",
+  "reference_photo": false,
+  "scientific": "Pyrrhocorax pyrrhocorax"
+ },
+ "pyrrhula-pyrrhula": {
+  "common": "Eurasian Bullfinch",
+  "generated": "2026-09-15",
+  "model": "gemini-2.5-flash-image",
+  "reference_photo": false,
+  "scientific": "Pyrrhula pyrrhula"
+ },
+ "rallus-aquaticus": {
+  "common": "Water Rail",
+  "generated": "2026-09-15",
+  "model": "gemini-2.5-flash-image",
+  "reference_photo": false,
+  "scientific": "Rallus aquaticus"
+ },
+ "recurvirostra-avosetta": {
+  "common": "Pied Avocet",
+  "generated": "2026-09-15",
+  "model": "gemini-2.5-flash-image",
+  "reference_photo": true,
+  "scientific": "Recurvirostra avosetta"
+ },
+ "regulus-ignicapilla": {
+  "common": "Common Firecrest",
+  "generated": "2026-09-15",
+  "model": "gemini-2.5-flash-image",
+  "reference_photo": false,
+  "scientific": "Regulus ignicapilla"
  },
  "regulus-regulus": {
   "common": "Goldcrest",
@@ -278,11 +1062,67 @@
   "source": "avianvisitors",
   "variant": "cutouts"
  },
+ "rissa-tridactyla": {
+  "common": "Black-legged Kittiwake",
+  "generated": "2026-09-15",
+  "model": "gemini-2.5-flash-image",
+  "reference_photo": false,
+  "scientific": "Rissa tridactyla"
+ },
+ "saxicola-rubetra": {
+  "common": "Whinchat",
+  "generated": "2026-09-15",
+  "model": "gemini-2.5-flash-image",
+  "reference_photo": false,
+  "scientific": "Saxicola rubetra"
+ },
+ "saxicola-rubicola": {
+  "common": "European Stonechat",
+  "generated": "2026-09-15",
+  "model": "gemini-2.5-flash-image",
+  "reference_photo": false,
+  "scientific": "Saxicola rubicola"
+ },
+ "sitta-europaea": {
+  "common": "Eurasian Nuthatch",
+  "generated": "2026-09-15",
+  "model": "gemini-2.5-flash-image",
+  "reference_photo": false,
+  "scientific": "Sitta europaea"
+ },
+ "somateria-mollissima": {
+  "common": "Common Eider",
+  "generated": "2026-09-15",
+  "model": "gemini-2.5-flash-image",
+  "reference_photo": true,
+  "scientific": "Somateria mollissima"
+ },
  "spatula-clypeata": {
   "common": "Northern Shoveler",
   "scientific": "Spatula clypeata",
   "source": "avianvisitors",
   "variant": "illustrations"
+ },
+ "spatula-querquedula": {
+  "common": "Garganey",
+  "generated": "2026-09-15",
+  "model": "gemini-2.5-flash-image",
+  "reference_photo": true,
+  "scientific": "Spatula querquedula"
+ },
+ "spinus-spinus": {
+  "common": "Eurasian Siskin",
+  "generated": "2026-09-15",
+  "model": "gemini-2.5-flash-image",
+  "reference_photo": false,
+  "scientific": "Spinus spinus"
+ },
+ "stercorarius-parasiticus": {
+  "common": "Arctic Skua",
+  "generated": "2026-09-15",
+  "model": "gemini-2.5-flash-image",
+  "reference_photo": false,
+  "scientific": "Stercorarius parasiticus"
  },
  "sterna-hirundo": {
   "common": "Common Tern",
@@ -290,17 +1130,108 @@
   "source": "avianvisitors",
   "variant": "illustrations"
  },
+ "sternula-albifrons": {
+  "common": "Little Tern",
+  "generated": "2026-09-15",
+  "model": "gemini-2.5-flash-image",
+  "reference_photo": true,
+  "scientific": "Sternula albifrons"
+ },
  "streptopelia-decaocto": {
   "common": "Collared Dove",
   "scientific": "Streptopelia decaocto",
   "source": "avianvisitors",
   "variant": "cutouts"
  },
+ "streptopelia-turtur": {
+  "common": "European Turtle Dove",
+  "generated": "2026-09-15",
+  "model": "gemini-2.5-flash-image",
+  "reference_photo": false,
+  "scientific": "Streptopelia turtur"
+ },
+ "strix-aluco": {
+  "common": "Tawny Owl",
+  "generated": "2026-09-15",
+  "model": "gemini-2.5-flash-image",
+  "reference_photo": true,
+  "scientific": "Strix aluco"
+ },
  "sturnus-vulgaris": {
   "common": "Common Starling",
   "scientific": "Sturnus vulgaris",
   "source": "avianvisitors",
   "variant": "cutouts"
+ },
+ "sylvia-atricapilla": {
+  "common": "Eurasian Blackcap",
+  "generated": "2026-09-15",
+  "model": "gemini-2.5-flash-image",
+  "reference_photo": true,
+  "scientific": "Sylvia atricapilla"
+ },
+ "sylvia-borin": {
+  "common": "Garden Warbler",
+  "generated": "2026-09-15",
+  "model": "gemini-2.5-flash-image",
+  "reference_photo": true,
+  "scientific": "Sylvia borin"
+ },
+ "tachybaptus-ruficollis": {
+  "common": "Little Grebe",
+  "generated": "2026-09-15",
+  "model": "gemini-2.5-flash-image",
+  "reference_photo": true,
+  "scientific": "Tachybaptus ruficollis"
+ },
+ "tadorna-tadorna": {
+  "common": "Common Shelduck",
+  "generated": "2026-09-15",
+  "model": "gemini-2.5-flash-image",
+  "reference_photo": true,
+  "scientific": "Tadorna tadorna"
+ },
+ "thalasseus-sandvicensis": {
+  "common": "Sandwich Tern",
+  "generated": "2026-09-15",
+  "model": "gemini-2.5-flash-image",
+  "reference_photo": false,
+  "scientific": "Thalasseus sandvicensis"
+ },
+ "tringa-erythropus": {
+  "common": "Spotted Redshank",
+  "generated": "2026-09-15",
+  "model": "gemini-2.5-flash-image",
+  "reference_photo": false,
+  "scientific": "Tringa erythropus"
+ },
+ "tringa-glareola": {
+  "common": "Wood Sandpiper",
+  "generated": "2026-09-15",
+  "model": "gemini-2.5-flash-image",
+  "reference_photo": false,
+  "scientific": "Tringa glareola"
+ },
+ "tringa-nebularia": {
+  "common": "Common Greenshank",
+  "generated": "2026-09-15",
+  "model": "gemini-2.5-flash-image",
+  "reference_photo": true,
+  "scientific": "Tringa nebularia"
+ },
+ "tringa-ochropus": {
+  "common": "Green Sandpiper",
+  "generated": "2026-09-15",
+  "model": "gemini-2.5-flash-image",
+  "reference_photo": true,
+  "scientific": "Tringa ochropus"
+ },
+ "tringa-totanus": {
+  "common": "Common Redshank",
+  "generated": "2026-09-15",
+  "model": "gemini-2.5-flash-image",
+  "reference_photo": true,
+  "scientific": "Tringa totanus"
  },
  "troglodytes-troglodytes": {
   "common": "Eurasian Wren",
@@ -309,10 +1240,66 @@
   "reference_photo": true,
   "scientific": "Troglodytes troglodytes"
  },
+ "turdus-iliacus": {
+  "common": "Redwing",
+  "generated": "2026-09-15",
+  "model": "gemini-2.5-flash-image",
+  "reference_photo": true,
+  "scientific": "Turdus iliacus"
+ },
+ "turdus-merula": {
+  "common": "Eurasian Blackbird",
+  "generated": "2026-09-15",
+  "model": "gemini-2.5-flash-image",
+  "reference_photo": true,
+  "scientific": "Turdus merula"
+ },
+ "turdus-philomelos": {
+  "common": "Song Thrush",
+  "generated": "2026-09-15",
+  "model": "gemini-2.5-flash-image",
+  "reference_photo": true,
+  "scientific": "Turdus philomelos"
+ },
+ "turdus-pilaris": {
+  "common": "Fieldfare",
+  "generated": "2026-09-15",
+  "model": "gemini-2.5-flash-image",
+  "reference_photo": false,
+  "scientific": "Turdus pilaris"
+ },
+ "turdus-torquatus": {
+  "common": "Ring Ouzel",
+  "generated": "2026-09-15",
+  "model": "gemini-2.5-flash-image",
+  "reference_photo": true,
+  "scientific": "Turdus torquatus"
+ },
+ "turdus-viscivorus": {
+  "common": "Mistle Thrush",
+  "generated": "2026-09-15",
+  "model": "gemini-2.5-flash-image",
+  "reference_photo": true,
+  "scientific": "Turdus viscivorus"
+ },
  "tyto-alba": {
   "common": "Barn Owl",
   "scientific": "Tyto alba",
   "source": "avianvisitors",
   "variant": "cutouts"
+ },
+ "uria-aalge": {
+  "common": "Common Guillemot",
+  "generated": "2026-09-15",
+  "model": "gemini-2.5-flash-image",
+  "reference_photo": true,
+  "scientific": "Uria aalge"
+ },
+ "vanellus-vanellus": {
+  "common": "Northern Lapwing",
+  "generated": "2026-09-15",
+  "model": "gemini-2.5-flash-image",
+  "reference_photo": true,
+  "scientific": "Vanellus vanellus"
  }
 }
