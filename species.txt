@@ -1,0 +1,191 @@
+Tyto alba|Barn Owl
+Athene noctua|Little Owl
+Botaurus stellaris|Great Bittern
+Columba palumbus|Common Woodpigeon
+Corvus corone|Carrion Crow
+Erithacus rubecula|European Robin
+Cyanistes caeruleus|Eurasian Blue Tit
+Corvus monedula|Eurasian Jackdaw
+Larus argentatus|Herring Gull
+Chroicocephalus ridibundus|Black-headed Gull
+Pica pica|Common Magpie
+Sturnus vulgaris|Common Starling
+Anas platyrhynchos|Mallard
+Parus major|Great Tit
+Phalacrocorax carbo|Great Cormorant
+Hirundo rustica|Barn Swallow
+Motacilla alba|Pied Wagtail/White Wagtail
+Ardea cinerea|Grey Heron
+Turdus merula|Eurasian Blackbird
+Carduelis carduelis|European Goldfinch
+Troglodytes troglodytes|Eurasian Wren
+Phylloscopus collybita|Common Chiffchaff
+Fringilla coelebs|Common Chaffinch
+Falco tinnunculus|Common Kestrel
+Passer domesticus|House Sparrow
+Buteo buteo|Common Buzzard
+Prunella modularis|Dunnock
+Gallinula chloropus|Common Moorhen
+Anthus pratensis|Meadow Pipit
+Cygnus olor|Mute Swan
+Fulica atra|Eurasian Coot
+Vanellus vanellus|Northern Lapwing
+Anser anser|Greylag Goose
+Linaria cannabina|Common Linnet
+Larus fuscus|Lesser Black-backed Gull
+Anas crecca|Eurasian/Green-winged Teal
+Columba livia|Rock Dove
+Larus marinus|Great Black-backed Gull
+Streptopelia decaocto|Collared Dove
+Numenius arquata|Eurasian Curlew
+Garrulus glandarius|Eurasian Jay
+Branta canadensis|Canada Goose
+Corvus frugilegus|Rook
+Haematopus ostralegus|Eurasian Oystercatcher
+Egretta garzetta|Little Egret
+Spatula clypeata|Northern Shoveler
+Columba oenas|Stock Dove
+Tringa totanus|Common Redshank
+Dendrocopos major|Great Spotted Woodpecker
+Calidris alpina|Dunlin
+Phasianus colchicus|Common Pheasant
+Aegithalos caudatus|Long-tailed Tit
+Mareca penelope|Eurasian Wigeon
+Mareca strepera|Gadwall
+Podiceps cristatus|Great Crested Grebe
+Accipiter nisus|Eurasian Sparrowhawk
+Aythya fuligula|Tufted Duck
+Tachybaptus ruficollis|Little Grebe
+Delichon urbicum|Western House Martin
+Gallinago gallinago|Common Snipe
+Charadrius hiaticula|Common Ringed Plover
+Regulus regulus|Goldcrest
+Chloris chloris|European Greenfinch
+Sylvia atricapilla|Eurasian Blackcap
+Emberiza schoeniclus|Common Reed Bunting
+Turdus philomelos|Song Thrush
+Larus canus|Common Gull
+Circus aeruginosus|Western Marsh Harrier
+Tringa nebularia|Common Greenshank
+Tadorna tadorna|Common Shelduck
+Thalasseus sandvicensis|Sandwich Tern
+Limosa limosa|Black-tailed Godwit
+Saxicola rubicola|European Stonechat
+Motacilla cinerea|Grey Wagtail
+Alauda arvensis|Eurasian Skylark
+Sitta europaea|Eurasian Nuthatch
+Picus viridis|Eurasian Green Woodpecker
+Ardea alba|Great White Egret
+Periparus ater|Coal Tit
+Limosa lapponica|Bar-tailed Godwit
+Alopochen aegyptiaca|Egyptian Goose
+Alcedo atthis|Common Kingfisher
+Motacilla flava|Western Yellow Wagtail
+Arenaria interpres|Ruddy Turnstone
+Corvus corax|Common Raven
+Calidris pugnax|Ruff
+Recurvirostra avosetta|Pied Avocet
+Pluvialis apricaria|European Golden Plover
+Actitis hypoleucos|Common Sandpiper
+Oenanthe oenanthe|Northern Wheatear
+Phylloscopus trochilus|Willow Warbler
+Sterna hirundo|Common Tern
+Curruca communis|Common Whitethroat
+Tringa ochropus|Green Sandpiper
+Riparia riparia|Sand Martin
+Aythya ferina|Common Pochard
+Morus bassanus|Northern Gannet
+Falco subbuteo|Eurasian Hobby
+Cettia cetti|Cetti's Warbler
+Calidris canutus|Red Knot
+Acrocephalus scirpaceus|Common Reed Warbler
+Calidris alba|Sanderling
+Spinus spinus|Eurasian Siskin
+Platalea leucorodia|Eurasian Spoonbill
+Anas acuta|Northern Pintail
+Falco peregrinus|Peregrine Falcon
+Tringa erythropus|Spotted Redshank
+Turdus iliacus|Redwing
+Turdus viscivorus|Mistle Thrush
+Milvus milvus|Red Kite
+Rallus aquaticus|Water Rail
+Pyrrhula pyrrhula|Eurasian Bullfinch
+Pluvialis squatarola|Grey Plover
+Ichthyaetus melanocephalus|Mediterranean Gull
+Anthus petrosus|Rock Pipit
+Acrocephalus schoenobaenus|Sedge Warbler
+Passer montanus|Eurasian Tree Sparrow
+Branta leucopsis|Barnacle Goose
+Melanitta nigra|Common Scoter
+Certhia familiaris|Eurasian Treecreeper
+Somateria mollissima|Common Eider
+Saxicola rubetra|Whinchat
+Emberiza citrinella|Yellowhammer
+Muscicapa striata|Spotted Flycatcher
+Psittacula krameri|Ring-necked Parakeet
+Numenius phaeopus|Whimbrel
+Phoenicurus ochruros|Black Redstart
+Anthus trivialis|Tree Pipit
+Calidris ferruginea|Curlew Sandpiper
+Branta bernicla|Brent Goose
+Phoenicurus phoenicurus|Common Redstart
+Fringilla montifringilla|Brambling
+Calidris minuta|Little Stint
+Falco columbarius|Merlin
+Certhia brachydactyla|Short-toed Treecreeper
+Uria aalge|Common Guillemot
+Poecile palustris|Marsh Tit
+Turdus pilaris|Fieldfare
+Loxia curvirostra|Common Crossbill
+Tringa glareola|Wood Sandpiper
+Puffinus puffinus|Manx Shearwater
+Curruca curruca|Lesser Whitethroat
+Alca torda|Razorbill
+Pandion haliaetus|Osprey
+Rissa tridactyla|Black-legged Kittiwake
+Circus cyaneus|Hen Harrier
+Pyrrhocorax pyrrhocorax|Red-billed Chough
+Acanthis cabaret|Lesser Redpoll
+Mergus merganser|Goosander
+Charadrius dubius|Little Ringed Plover
+Gavia stellata|Red-throated Diver
+Apus apus|Common Swift
+Mergus serrator|Red-breasted Merganser
+Fulmarus glacialis|Northern Fulmar
+Corvus cornix|Hooded Crow
+Anser albifrons|Greater White-fronted Goose
+Sylvia borin|Garden Warbler
+Anser brachyrhynchus|Pink-footed Goose
+Panurus biarmicus|Bearded Tit
+Bubulcus ibis|Western Cattle-Egret
+Hydrocoloeus minutus|Little Gull
+Lophophanes cristatus|Crested Tit
+Grus grus|Common Crane
+Turdus torquatus|Ring Ouzel
+Regulus ignicapilla|Common Firecrest
+Strix aluco|Tawny Owl
+Accipiter gentilis|Eurasian Goshawk
+Ficedula hypoleuca|European Pied Flycatcher
+Pernis apivorus|European Honey-buzzard
+Podiceps nigricollis|Black-necked Grebe
+Stercorarius parasiticus|Arctic Skua
+Cinclus cinclus|White-throated Dipper
+Perdix perdix|Grey Partridge
+Haliaeetus albicilla|White-tailed Eagle
+Sternula albifrons|Little Tern
+Coccothraustes coccothraustes|Hawfinch
+Phylloscopus inornatus|Yellow-browed Warbler
+Cisticola juncidis|Zitting Cisticola
+Luscinia svecica|Bluethroat
+Bucephala clangula|Common Goldeneye
+Alectoris rufa|Red-legged Partridge
+Spatula querquedula|Garganey
+Dryobates minor|Lesser Spotted Woodpecker
+Streptopelia turtur|European Turtle Dove
+Emberiza cirlus|Cirl Bunting
+Asio flammeus|Short-eared Owl
+Cygnus cygnus|Whooper Swan
+Larus michahellis|Yellow-legged Gull
+Podiceps auritus|Slavonian Grebe
+Himantopus himantopus|Black-winged Stilt
+Larus cachinnans|Caspian Gull

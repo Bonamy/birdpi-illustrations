@@ -1,0 +1,241 @@
+{
+ "accipiter-gentilis": {
+  "common": "Eurasian Goshawk",
+  "scientific": "Accipiter gentilis",
+  "source": "avianvisitors",
+  "variant": "illustrations"
+ },
+ "aegithalos-caudatus": {
+  "common": "Long-tailed Tit",
+  "generated": "2026-09-15",
+  "model": "gemini-2.5-flash-image",
+  "reference_photo": true,
+  "scientific": "Aegithalos caudatus"
+ },
+ "anas-acuta": {
+  "common": "Northern Pintail",
+  "scientific": "Anas acuta",
+  "source": "avianvisitors",
+  "variant": "illustrations"
+ },
+ "anas-crecca": {
+  "common": "Eurasian/Green-winged Teal",
+  "scientific": "Anas crecca",
+  "source": "avianvisitors",
+  "variant": "cutouts"
+ },
+ "anas-platyrhynchos": {
+  "common": "Mallard",
+  "scientific": "Anas platyrhynchos",
+  "source": "avianvisitors",
+  "variant": "illustrations"
+ },
+ "anser-albifrons": {
+  "common": "Greater White-fronted Goose",
+  "scientific": "Anser albifrons",
+  "source": "avianvisitors",
+  "variant": "illustrations"
+ },
+ "ardea-alba": {
+  "common": "Great White Egret",
+  "scientific": "Ardea alba",
+  "source": "avianvisitors",
+  "variant": "illustrations"
+ },
+ "asio-flammeus": {
+  "common": "Short-eared Owl",
+  "scientific": "Asio flammeus",
+  "source": "avianvisitors",
+  "variant": "illustrations"
+ },
+ "athene-noctua": {
+  "common": "Little Owl",
+  "generated": "2026-09-15",
+  "model": "gemini-2.5-flash-image",
+  "reference_photo": true,
+  "scientific": "Athene noctua"
+ },
+ "branta-canadensis": {
+  "common": "Canada Goose",
+  "scientific": "Branta canadensis",
+  "source": "avianvisitors",
+  "variant": "cutouts"
+ },
+ "bubulcus-ibis": {
+  "common": "Western Cattle-Egret",
+  "scientific": "Bubulcus ibis",
+  "source": "avianvisitors",
+  "variant": "cutouts"
+ },
+ "bucephala-clangula": {
+  "common": "Common Goldeneye",
+  "scientific": "Bucephala clangula",
+  "source": "avianvisitors",
+  "variant": "cutouts"
+ },
+ "calidris-alba": {
+  "common": "Sanderling",
+  "scientific": "Calidris alba",
+  "source": "avianvisitors",
+  "variant": "illustrations"
+ },
+ "calidris-alpina": {
+  "common": "Dunlin",
+  "scientific": "Calidris alpina",
+  "source": "avianvisitors",
+  "variant": "illustrations"
+ },
+ "columba-livia": {
+  "common": "Rock Dove",
+  "scientific": "Columba livia",
+  "source": "avianvisitors",
+  "variant": "cutouts"
+ },
+ "corvus-corax": {
+  "common": "Common Raven",
+  "scientific": "Corvus corax",
+  "source": "avianvisitors",
+  "variant": "cutouts"
+ },
+ "cygnus-olor": {
+  "common": "Mute Swan",
+  "scientific": "Cygnus olor",
+  "source": "avianvisitors",
+  "variant": "illustrations"
+ },
+ "erithacus-rubecula": {
+  "common": "European Robin",
+  "generated": "2026-09-15",
+  "model": "gemini-2.5-flash-image",
+  "reference_photo": true,
+  "scientific": "Erithacus rubecula"
+ },
+ "falco-columbarius": {
+  "common": "Merlin",
+  "scientific": "Falco columbarius",
+  "source": "avianvisitors",
+  "variant": "illustrations"
+ },
+ "falco-peregrinus": {
+  "common": "Peregrine Falcon",
+  "scientific": "Falco peregrinus",
+  "source": "avianvisitors",
+  "variant": "illustrations"
+ },
+ "hirundo-rustica": {
+  "common": "Barn Swallow",
+  "scientific": "Hirundo rustica",
+  "source": "avianvisitors",
+  "variant": "cutouts"
+ },
+ "larus-argentatus": {
+  "common": "Herring Gull",
+  "scientific": "Larus argentatus",
+  "source": "avianvisitors",
+  "variant": "illustrations"
+ },
+ "larus-marinus": {
+  "common": "Great Black-backed Gull",
+  "scientific": "Larus marinus",
+  "source": "avianvisitors",
+  "variant": "illustrations"
+ },
+ "loxia-curvirostra": {
+  "common": "Common Crossbill",
+  "scientific": "Loxia curvirostra",
+  "source": "avianvisitors",
+  "variant": "cutouts"
+ },
+ "mareca-strepera": {
+  "common": "Gadwall",
+  "scientific": "Mareca strepera",
+  "source": "avianvisitors",
+  "variant": "illustrations"
+ },
+ "mergus-merganser": {
+  "common": "Goosander",
+  "scientific": "Mergus merganser",
+  "source": "avianvisitors",
+  "variant": "illustrations"
+ },
+ "pandion-haliaetus": {
+  "common": "Osprey",
+  "scientific": "Pandion haliaetus",
+  "source": "avianvisitors",
+  "variant": "illustrations"
+ },
+ "passer-domesticus": {
+  "common": "House Sparrow",
+  "scientific": "Passer domesticus",
+  "source": "avianvisitors",
+  "variant": "cutouts"
+ },
+ "phasianus-colchicus": {
+  "common": "Common Pheasant",
+  "scientific": "Phasianus colchicus",
+  "source": "avianvisitors",
+  "variant": "illustrations"
+ },
+ "pluvialis-squatarola": {
+  "common": "Grey Plover",
+  "scientific": "Pluvialis squatarola",
+  "source": "avianvisitors",
+  "variant": "illustrations"
+ },
+ "podiceps-nigricollis": {
+  "common": "Black-necked Grebe",
+  "scientific": "Podiceps nigricollis",
+  "source": "avianvisitors",
+  "variant": "illustrations"
+ },
+ "regulus-regulus": {
+  "common": "Goldcrest",
+  "generated": "2026-09-15",
+  "model": "gemini-2.5-flash-image",
+  "reference_photo": true,
+  "scientific": "Regulus regulus"
+ },
+ "riparia-riparia": {
+  "common": "Sand Martin",
+  "scientific": "Riparia riparia",
+  "source": "avianvisitors",
+  "variant": "cutouts"
+ },
+ "spatula-clypeata": {
+  "common": "Northern Shoveler",
+  "scientific": "Spatula clypeata",
+  "source": "avianvisitors",
+  "variant": "illustrations"
+ },
+ "sterna-hirundo": {
+  "common": "Common Tern",
+  "scientific": "Sterna hirundo",
+  "source": "avianvisitors",
+  "variant": "illustrations"
+ },
+ "streptopelia-decaocto": {
+  "common": "Collared Dove",
+  "scientific": "Streptopelia decaocto",
+  "source": "avianvisitors",
+  "variant": "cutouts"
+ },
+ "sturnus-vulgaris": {
+  "common": "Common Starling",
+  "scientific": "Sturnus vulgaris",
+  "source": "avianvisitors",
+  "variant": "cutouts"
+ },
+ "troglodytes-troglodytes": {
+  "common": "Eurasian Wren",
+  "generated": "2026-09-15",
+  "model": "gemini-2.5-flash-image",
+  "reference_photo": true,
+  "scientific": "Troglodytes troglodytes"
+ },
+ "tyto-alba": {
+  "common": "Barn Owl",
+  "scientific": "Tyto alba",
+  "source": "avianvisitors",
+  "variant": "cutouts"
+ }
+}
