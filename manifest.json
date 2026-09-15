@@ -8,9 +8,10 @@
  },
  "accipiter-gentilis": {
   "common": "Eurasian Goshawk",
-  "scientific": "Accipiter gentilis",
-  "source": "avianvisitors",
-  "variant": "illustrations"
+  "generated": "2026-09-15",
+  "model": "gemini-2.5-flash-image",
+  "reference_photo": true,
+  "scientific": "Accipiter gentilis"
  },
  "accipiter-nisus": {
   "common": "Eurasian Sparrowhawk",
@@ -37,7 +38,7 @@
   "common": "Common Sandpiper",
   "generated": "2026-09-15",
   "model": "gemini-2.5-flash-image",
-  "reference_photo": false,
+  "reference_photo": true,
   "scientific": "Actitis hypoleucos"
  },
  "aegithalos-caudatus": {
@@ -58,7 +59,7 @@
   "common": "Razorbill",
   "generated": "2026-09-15",
   "model": "gemini-2.5-flash-image",
-  "reference_photo": false,
+  "reference_photo": true,
   "scientific": "Alca torda"
  },
  "alcedo-atthis": {
@@ -150,9 +151,10 @@
  },
  "ardea-alba": {
   "common": "Great White Egret",
-  "scientific": "Ardea alba",
-  "source": "avianvisitors",
-  "variant": "illustrations"
+  "generated": "2026-09-15",
+  "model": "gemini-2.5-flash-image",
+  "reference_photo": true,
+  "scientific": "Ardea alba"
  },
  "ardea-cinerea": {
   "common": "Grey Heron",
@@ -170,9 +172,10 @@
  },
  "asio-flammeus": {
   "common": "Short-eared Owl",
-  "scientific": "Asio flammeus",
-  "source": "avianvisitors",
-  "variant": "illustrations"
+  "generated": "2026-09-15",
+  "model": "gemini-2.5-flash-image",
+  "reference_photo": true,
+  "scientific": "Asio flammeus"
  },
  "athene-noctua": {
   "common": "Little Owl",
@@ -224,9 +227,10 @@
  },
  "bubulcus-ibis": {
   "common": "Western Cattle-Egret",
-  "scientific": "Bubulcus ibis",
-  "source": "avianvisitors",
-  "variant": "cutouts"
+  "generated": "2026-09-15",
+  "model": "gemini-2.5-flash-image",
+  "reference_photo": true,
+  "scientific": "Bubulcus ibis"
  },
  "bucephala-clangula": {
   "common": "Common Goldeneye",
@@ -243,9 +247,10 @@
  },
  "calidris-alba": {
   "common": "Sanderling",
-  "scientific": "Calidris alba",
-  "source": "avianvisitors",
-  "variant": "illustrations"
+  "generated": "2026-09-15",
+  "model": "gemini-2.5-flash-image",
+  "reference_photo": true,
+  "scientific": "Calidris alba"
  },
  "calidris-alpina": {
   "common": "Dunlin",
@@ -278,7 +283,7 @@
   "common": "Ruff",
   "generated": "2026-09-15",
   "model": "gemini-2.5-flash-image",
-  "reference_photo": false,
+  "reference_photo": true,
   "scientific": "Calidris pugnax"
  },
  "carduelis-cannabina": {
@@ -323,7 +328,7 @@
   "common": "Eurasian Treecreeper",
   "generated": "2026-09-15",
   "model": "gemini-2.5-flash-image",
-  "reference_photo": false,
+  "reference_photo": true,
   "scientific": "Certhia familiaris"
  },
  "cettia-cetti": {
@@ -337,7 +342,7 @@
   "common": "Little Ringed Plover",
   "generated": "2026-09-15",
   "model": "gemini-2.5-flash-image",
-  "reference_photo": false,
+  "reference_photo": true,
   "scientific": "Charadrius dubius"
  },
  "charadrius-hiaticula": {
@@ -462,14 +467,14 @@
   "common": "Common Whitethroat",
   "generated": "2026-09-15",
   "model": "gemini-2.5-flash-image",
-  "reference_photo": false,
+  "reference_photo": true,
   "scientific": "Curruca communis"
  },
  "curruca-curruca": {
   "common": "Lesser Whitethroat",
   "generated": "2026-09-15",
   "model": "gemini-2.5-flash-image",
-  "reference_photo": false,
+  "reference_photo": true,
   "scientific": "Curruca curruca"
  },
  "cyanistes-caeruleus": {
@@ -483,7 +488,7 @@
   "common": "Whooper Swan",
   "generated": "2026-09-15",
   "model": "gemini-2.5-flash-image",
-  "reference_photo": false,
+  "reference_photo": true,
   "scientific": "Cygnus cygnus"
  },
  "cygnus-olor": {
@@ -532,7 +537,7 @@
   "common": "Cirl Bunting",
   "generated": "2026-09-15",
   "model": "gemini-2.5-flash-image",
-  "reference_photo": false,
+  "reference_photo": true,
   "scientific": "Emberiza cirlus"
  },
  "emberiza-citrinella": {
@@ -558,9 +563,10 @@
  },
  "falco-columbarius": {
   "common": "Merlin",
-  "scientific": "Falco columbarius",
-  "source": "avianvisitors",
-  "variant": "illustrations"
+  "generated": "2026-09-15",
+  "model": "gemini-2.5-flash-image",
+  "reference_photo": true,
+  "scientific": "Falco columbarius"
  },
  "falco-peregrinus": {
   "common": "Peregrine Falcon",
@@ -683,7 +689,7 @@
   "common": "Little Gull",
   "generated": "2026-09-15",
   "model": "gemini-2.5-flash-image",
-  "reference_photo": false,
+  "reference_photo": true,
   "scientific": "Hydrocoloeus minutus"
  },
  "ichthyaetus-melanocephalus": {
@@ -695,15 +701,16 @@
  },
  "larus-argentatus": {
   "common": "Herring Gull",
-  "scientific": "Larus argentatus",
-  "source": "avianvisitors",
-  "variant": "illustrations"
+  "generated": "2026-09-15",
+  "model": "gemini-2.5-flash-image",
+  "reference_photo": true,
+  "scientific": "Larus argentatus"
  },
  "larus-cachinnans": {
   "common": "Caspian Gull",
   "generated": "2026-09-15",
   "model": "gemini-2.5-flash-image",
-  "reference_photo": false,
+  "reference_photo": true,
   "scientific": "Larus cachinnans"
  },
  "larus-canus": {
@@ -744,7 +751,7 @@
   "common": "Black-tailed Godwit",
   "generated": "2026-09-15",
   "model": "gemini-2.5-flash-image",
-  "reference_photo": false,
+  "reference_photo": true,
   "scientific": "Limosa limosa"
  },
  "linaria-cannabina": {
@@ -763,9 +770,10 @@
  },
  "loxia-curvirostra": {
   "common": "Common Crossbill",
-  "scientific": "Loxia curvirostra",
-  "source": "avianvisitors",
-  "variant": "cutouts"
+  "generated": "2026-09-15",
+  "model": "gemini-2.5-flash-image",
+  "reference_photo": true,
+  "scientific": "Loxia curvirostra"
  },
  "luscinia-svecica": {
   "common": "Bluethroat",
@@ -796,9 +804,10 @@
  },
  "mergus-merganser": {
   "common": "Goosander",
-  "scientific": "Mergus merganser",
-  "source": "avianvisitors",
-  "variant": "illustrations"
+  "generated": "2026-09-15",
+  "model": "gemini-2.5-flash-image",
+  "reference_photo": true,
+  "scientific": "Mergus merganser"
  },
  "mergus-serrator": {
   "common": "Red-breasted Merganser",
@@ -818,7 +827,7 @@
   "common": "Northern Gannet",
   "generated": "2026-09-15",
   "model": "gemini-2.5-flash-image",
-  "reference_photo": false,
+  "reference_photo": true,
   "scientific": "Morus bassanus"
  },
  "motacilla-alba": {
@@ -990,7 +999,7 @@
   "common": "Eurasian Spoonbill",
   "generated": "2026-09-15",
   "model": "gemini-2.5-flash-image",
-  "reference_photo": false,
+  "reference_photo": true,
   "scientific": "Platalea leucorodia"
  },
  "pluvialis-apricaria": {
@@ -1114,7 +1123,7 @@
   "common": "Black-legged Kittiwake",
   "generated": "2026-09-15",
   "model": "gemini-2.5-flash-image",
-  "reference_photo": false,
+  "reference_photo": true,
   "scientific": "Rissa tridactyla"
  },
  "saxicola-rubetra": {
@@ -1259,7 +1268,7 @@
   "common": "Sandwich Tern",
   "generated": "2026-09-15",
   "model": "gemini-2.5-flash-image",
-  "reference_photo": false,
+  "reference_photo": true,
   "scientific": "Thalasseus sandvicensis"
  },
  "tringa-erythropus": {
